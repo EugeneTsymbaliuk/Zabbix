@@ -1,0 +1,8 @@
+Value Filldown LOCAL_HOST (\S+)
+Value Required DEST_HOST (\S+)
+Value MGMNT_IP (.*)
+
+Start
+  ^${LOCAL_HOST}[>#].
+  ^Device ID: ${DEST_HOST}
+  ^.*ddress: ${MGMNT_IP} -> Record
